@@ -47,7 +47,7 @@ const restAPIFetch = async () => {
   try {
     let response = await fetch("http://localhost:8080/comments");
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
     return data;
   } catch (err) {
     console.log(err);
@@ -63,7 +63,7 @@ funcCreateComment = async (comment) => {
     },
   });
   let data = await response.json();
-  console.log(data);
+  // console.log(data);
   createCards(data.comments);
 };
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       body: document.getElementById("bodyInput").value,
     };
 
-    console.log(comment);
+    // console.log(comment);
 
     funcCreateComment(comment);
 
